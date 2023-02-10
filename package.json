@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/bobbyecho/eslint-config#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "scripts": {
     "release": "release-it",
