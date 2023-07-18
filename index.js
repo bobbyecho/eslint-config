@@ -3,6 +3,8 @@ module.exports = {
     es6: true,
   },
 
+  parser: "@typescript-eslint/parser",
+
   parserOptions: {
     sourceType: 'module',
     ecmaFeatures: {
@@ -11,9 +13,6 @@ module.exports = {
   },
 
   settings: {
-    flowtype: {
-      onlyFilesWithFlowAnnotation: true,
-    },
     react: {
       version: 'detect',
     },
@@ -120,7 +119,6 @@ module.exports = {
     'use-isnan': 'error',
 
     'babel/no-unused-expressions': ['error', { allowShortCircuit: true }],
-    'babel/valid-typeof': 'error',
 
     'eslint-comments/disable-enable-pair': ['error', { allowWholeFile: true }],
     'eslint-comments/no-aggregating-enable': 'error',
@@ -186,48 +184,18 @@ module.exports = {
       'error',
       {
         quoteProps: 'consistent',
-        singleQuote: true,
+        singleQuote: false,
         tabWidth: 2,
-        trailingComma: 'es5',
+        trailingComma: 'all',
         useTabs: false,
+        bracketSpacing: true,
+        arrowParens: 'always',
+        bracketSameLine: false
       },
     ],
   },
 
   overrides: [
-    {
-      files: ['*.js'],
-      parser: require.resolve('@babel/eslint-parser'),
-      parserOptions: {
-        requireConfigFile: false,
-      },
-      plugins: ['flowtype'],
-      rules: {
-        'flowtype/array-style-complex-type': ['error', 'verbose'],
-        'flowtype/array-style-simple-type': ['error', 'shorthand'],
-        'flowtype/boolean-style': ['error', 'boolean'],
-        'flowtype/define-flow-type': 'error',
-        'flowtype/no-dupe-keys': 'error',
-        'flowtype/no-existential-type': 'warn',
-        'flowtype/no-primitive-constructor-types': 'error',
-        'flowtype/no-types-missing-file-annotation': 'error',
-        'flowtype/no-unused-expressions': [
-          'error',
-          { allowShortCircuit: true },
-        ],
-        'flowtype/require-types-at-top': 'error',
-        'flowtype/require-valid-file-annotation': 'error',
-        'flowtype/use-flow-type': 'error',
-
-        'import/default': 'error',
-        'import/named': 'error',
-        'import/namespace': 'error',
-        'import/no-named-as-default': 'error',
-        'import/no-named-as-default-member': 'error',
-        'import/no-cycle': 'error',
-        'import/no-deprecated': 'error',
-      },
-    },
     {
       files: ['*.ts', '*.tsx'],
       parser: require.resolve('@typescript-eslint/parser'),
