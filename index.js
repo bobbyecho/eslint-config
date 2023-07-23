@@ -183,14 +183,15 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        quoteProps: 'consistent',
-        singleQuote: false,
+        quoteProps: "consistent",
+        singleQuote: true,
         tabWidth: 2,
-        trailingComma: 'all',
+        trailingComma: "all",
         useTabs: false,
         bracketSpacing: true,
-        arrowParens: 'always',
-        bracketSameLine: false
+        arrowParens: "always",
+        bracketSameLine: false,
+        printWidth: 120,
       },
     ],
   },
@@ -249,6 +250,7 @@ module.exports = {
         '@typescript-eslint/prefer-optional-chain': 'off',
         '@typescript-eslint/triple-slash-reference': 'error',
         '@typescript-eslint/unified-signatures': 'error',
+        "@typescript-eslint/consistent-type-imports": "error",
 
         'default-case': 'off',
         'no-dupe-class-members': 'off',
