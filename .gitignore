@@ -5,3 +5,5 @@ yarn-debug.log
 
 node_modules/
 .history/
+
+.npmrc
