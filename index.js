@@ -3,7 +3,7 @@ module.exports = {
     es6: true,
   },
 
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
 
   parserOptions: {
     sourceType: 'module',
@@ -31,8 +31,12 @@ module.exports = {
   ],
 
   rules: {
+    'no-else-return': 'error',
+    'max-depth': ['error', 2],
+    'max-params': ['error', 3],
+    'no-nested-ternary': 'error',
+    'no-undefined': 'warn',
     eqeqeq: ['error', 'smart'],
-
     'array-callback-return': 'error',
     'constructor-super': 'error',
     'default-case': ['error', { commentPattern: '^no default$' }],
@@ -183,13 +187,13 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        quoteProps: "consistent",
+        quoteProps: 'consistent',
         singleQuote: true,
         tabWidth: 2,
-        trailingComma: "all",
+        trailingComma: 'all',
         useTabs: false,
         bracketSpacing: true,
-        arrowParens: "always",
+        arrowParens: 'always',
         bracketSameLine: false,
         printWidth: 120,
       },
@@ -250,7 +254,7 @@ module.exports = {
         '@typescript-eslint/prefer-optional-chain': 'off',
         '@typescript-eslint/triple-slash-reference': 'error',
         '@typescript-eslint/unified-signatures': 'error',
-        "@typescript-eslint/consistent-type-imports": "error",
+        '@typescript-eslint/consistent-type-imports': 'error',
 
         'default-case': 'off',
         'no-dupe-class-members': 'off',
