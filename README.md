@@ -9,7 +9,6 @@ The config includes these plugins by default:
 - [babel](https://github.com/babel/eslint-plugin-babel)
 - [eslint-comments](https://github.com/mysticatea/eslint-plugin-eslint-comments)
 - [import](https://github.com/benmosher/eslint-plugin-import/issues)
-- [jest](https://github.com/jest-community/eslint-plugin-jest/issues)
 - [prettier](https://github.com/prettier/eslint-plugin-prettier)
 - [react](https://github.com/yannickcr/eslint-plugin-react/issues)
 - [react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)

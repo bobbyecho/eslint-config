@@ -265,38 +265,6 @@ module.exports = {
       },
     },
     {
-      plugins: ['jest'],
-      files: ['*.{spec,test}.{js,ts,tsx}', '**/__tests__/**/*.{js,ts,tsx}'],
-      env: {
-        jest: true,
-        'jest/globals': true,
-      },
-      rules: {
-        'import/no-extraneous-dependencies': [
-          'error',
-          { devDependencies: true },
-        ],
-
-        'jest/consistent-test-it': ['error', { fn: 'it' }],
-        'jest/expect-expect': 'error',
-        'jest/no-disabled-tests': 'error',
-        'jest/no-duplicate-hooks': 'error',
-        'jest/no-export': 'error',
-        'jest/no-focused-tests': 'error',
-        'jest/no-identical-title': 'error',
-        'jest/no-jasmine-globals': 'error',
-        'jest/no-test-prefixes': 'error',
-        'jest/no-test-return-statement': 'error',
-        'jest/prefer-to-be': 'error',
-        'jest/prefer-todo': 'error',
-        'jest/require-to-throw-message': 'error',
-        'jest/valid-describe-callback': 'error',
-        'jest/valid-expect-in-promise': 'error',
-        'jest/valid-expect': 'error',
-        'jest/valid-title': 'error',
-      },
-    },
-    {
       files: ['*.config.js', '.*rc.js'],
       env: {
         node: true,
